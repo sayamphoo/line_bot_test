@@ -22,7 +22,7 @@ app.post("/webhook", line.middleware(config), (req, res) => {
 });
 
 function handleEvent(event) {
-  console.log("5550011:" + event.message.text);
+  console.log("5550011:" + event);
   if (event.type !== "message" || event.message.type !== "text") {
     return Promise.resolve(null);
     }

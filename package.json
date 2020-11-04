@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@line/bot-sdk": "^7.1.0",
     "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "12.18.0",
+    "npm": "6.14.4"
   },
   "devDependencies": {},
   "scripts": {
@@ -19,9 +24,5 @@
   "bugs": {
     "url": "https://github.com/sayamphoo/line_bot_test/issues"
   },
-  "homepage": "https://github.com/sayamphoo/line_bot_test#readme",
-  "engines": {
-    "node": "12.18.0",
-    "npm": "6.14.4"
-  }
+  "homepage": "https://github.com/sayamphoo/line_bot_test#readme"
 }

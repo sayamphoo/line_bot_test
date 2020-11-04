@@ -19,20 +19,19 @@ app.post("/webhook", line.middleware(config), (req, res) => {
         .all(req.body.events.map(handleEvent))
         .then((result) => res.json(result)
   );
-
 });
 
 function handleEvent(event) {
+  console.log("5550011:" + event.message.text);
   if (event.type !== "message" || event.message.type !== "text") {
     return Promise.resolve(null);
     }
     
   return client.replyMessage(event.replyToken, {
     type: "text",
-    text: event,
+    text: event.message.text,
   });
 }
-
 
 var server = app.listen(process.env.PORT || 5000, function () {
   var port = server.address().port;

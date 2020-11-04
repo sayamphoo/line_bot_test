@@ -10,9 +10,6 @@ const config = {
 
 const client = new line.Client(config);
 
-app.get('/', function (x, y) {
-  y.send("000")
-})
 
 app.post("/webhook", line.middleware(config), (req, res) => {
     Promise
@@ -24,17 +21,18 @@ app.post("/webhook", line.middleware(config), (req, res) => {
 function handleEvent(event) {
   console.log("111:" + event.type);
   console.log("222:" + event.message.type);
+  
   if (event.type !== "message" || event.message.type !== "text") {
     return Promise.resolve(null);
-    }
+  }
     
   return client.replyMessage(event.replyToken, {
     type: "text",
-    text: event.message.text,
+    text: "รักนะคร้าบบ",
   });
 }
 
-var server = app.listen(process.env.PORT || 5000, function () {
+app.listen(process.env.PORT || 5000, function () {
   var port = server.address().port;
   console.log("Express is working on port " + port);
 });

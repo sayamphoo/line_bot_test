@@ -1,6 +1,6 @@
 let objreply = {
   type: "text",
-  text: "",
+  text: "ว่าไง",
 };
 
 let check = function (message) {

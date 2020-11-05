@@ -36,13 +36,18 @@ let replyMes = (e) => {
       type: "text",
       text: "ว่าแล้วนายต้องทักมา",
     });
+  }
+  if (e.message.text === "ทักแน่นอน") {
+    return client.replyMessage(e.replyToken, {
+      type: "text",
+      text: "555+",
+    });
   } else {
-     return client.replyMessage(e.replyToken, {
+    return client.replyMessage(e.replyToken, {
       type: "text",
       text: "บอทไม่รู้จักคำนี้ [สอนบอท]",
     });
   }
-    
 };
 
 var server = app.listen(process.env.PORT || 5000, function () {

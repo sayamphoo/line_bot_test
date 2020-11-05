@@ -32,7 +32,7 @@ let replyMes = (e) => {
   });
 };
 
-const port = process.env.PORT || 8888;
-app.listen(port, (req, res) => {
+var server = app.listen(process.env.PORT || 5000, function () {
+  var port = server.address().port;
   console.log("Express is working on port " + port);
 });

@@ -6,7 +6,7 @@ const app = express();
 
 const client = new line.Client(co.config);
 
-app.post("/webhook", line.middleware(config), (req, res) => {
+app.post("/webhook", line.middleware(co.config), (req, res) => {
   Promise.all(req.body.events.map(handleEvent)).then((result) =>
     res.json(result)
   );

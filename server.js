@@ -10,7 +10,6 @@ const config = {
 
 const client = new line.Client(config);
 
-
 app.post("/webhook", line.middleware(config), (req, res) => {
     Promise
         .all(req.body.events.map(handleEvent))
@@ -19,6 +18,7 @@ app.post("/webhook", line.middleware(config), (req, res) => {
 });
 
 function handleEvent(event) {
+  console.log('object _line'+JSON.stringify(event))
   console.log("111:" + event.type);
   console.log("222:" + event.message.type);
   
@@ -32,7 +32,7 @@ function handleEvent(event) {
   });
 }
 
-app.listen(process.env.PORT || 5000, function () {
-  var port = server.address().port;
-  console.log("Express is working on port " + port);
+const port = process.env.PORT || 8888
+app.listen(port, (req, res) => {
+   console.log("Express is working on port " + port);
 });

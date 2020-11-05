@@ -23,7 +23,7 @@ function handleEvent(event) {
 
   if (event.type === "message") {
     if (event.message.type === "text") {
-      replyMes(event);
+      return replyMes(event);
     }
   } else {
     return Promise.resolve(null);

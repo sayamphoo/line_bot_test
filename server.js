@@ -39,7 +39,7 @@ let replyMes = (e) => {
   } else {
      return client.replyMessage(e.replyToken, {
       type: "text",
-      text: "บอทไม่รู้จักคำนี้||สอนบอท",
+      text: "บอทไม่รู้จักคำนี้ [สอนบอท]",
     });
   }
     

@@ -31,10 +31,18 @@ function handleEvent(event) {
 }
 
 let replyMes = (e) => {
-  return client.replyMessage(e.replyToken, {
-    type: "text",
-    text: "รักนะคร้าบบ",
-  });
+  if (e.message.text === "สวัสดี") {
+    return client.replyMessage(e.replyToken, {
+      type: "text",
+      text: "ว่าแล้วนายต้องทักมา",
+    });
+  } else {
+     return client.replyMessage(e.replyToken, {
+      type: "text",
+      text: "บอทไม่รู้จักคำนี้||สอนบอท",
+    });
+  }
+    
 };
 
 var server = app.listen(process.env.PORT || 5000, function () {

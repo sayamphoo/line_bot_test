@@ -31,7 +31,7 @@ function handleEvent(event) {
 }
 
 let replyMes = (e) => {
-  return client.replyMessage(event.replyToken, {
+  return client.replyMessage(e.replyToken, {
     type: "text",
     text: "รักนะคร้าบบ",
   });

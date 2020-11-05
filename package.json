@@ -2,7 +2,7 @@
   "name": "line",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "dependencies": {
     "@line/bot-sdk": "^7.1.0",
     "express": "^4.17.1"
